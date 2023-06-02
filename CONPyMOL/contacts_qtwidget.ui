@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>657</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>621</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Classic mode</string>
+     </attribute>
+     <widget class="QCheckBox" name="CleanDisplayCheckBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>350</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reinitialize display</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ColorChoiceComboBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>200</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>contact score</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>false positives</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>contact satisfaction</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>contact range</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>black</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blue</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>brown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>green</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>grey</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>orange</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pink</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>purple</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>red</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>yellow</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>white</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="LabelChoiceComboBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>300</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>distance</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>score</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sequence separation</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QDoubleSpinBox" name="ScoreThresholdSpinBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>300</y>
+        <width>111</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="decimals">
+       <number>2</number>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.500000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="NoFileSelectedLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>601</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>No contact file selected !</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ColorChoiceLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>200</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Color</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="ThicknessSpinBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>250</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+      <property name="value">
+       <number>2</number>
+      </property>
+      <property name="displayIntegerBase" stdset="0">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CmapFormatLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>250</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cmap file format</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ScoreThresholdLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>300</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Contact score threshold</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Optionslabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>10</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Display on molecules:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="CmapFormatComboBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>250</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>casp</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>comsat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>epcmap</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>evfold</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>flib</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>freecontact</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>gremlin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>membrain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>nebcon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pconsc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>plmdca</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>psicov</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="ShowLabelsCheckBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>350</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show labels</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ThicknessLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>250</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Connector thickness</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LabelChoiceLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Labels</string>
+      </property>
+     </widget>
+     <widget class="QListView" name="MoleculeSelectionListView">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>431</width>
+        <height>121</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ShowBioUnitCheckBox">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show biological unit</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Intermolecular contacts</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QDialogButtonBox" name="FinalButtonBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>510</y>
+      <width>181</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="standardButtons">
+     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    </property>
+    <property name="centerButtons">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>657</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOpen_cmap"/>
+    <addaction name="actionOpen_cif"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Tools">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <widget class="QMenu" name="menuDistance_threshold">
+     <property name="title">
+      <string>Distance threshold</string>
+     </property>
+     <addaction name="actionShow_neighbours"/>
+     <addaction name="actionShow_short"/>
+     <addaction name="actionShow_medium"/>
+     <addaction name="actionShow_long"/>
+    </widget>
+    <addaction name="menuDistance_threshold"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Tools"/>
+   <addaction name="menu_View"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_cmap">
+   <property name="text">
+    <string>Open cmap</string>
+   </property>
+  </action>
+  <action name="actionFilter_out_contacts">
+   <property name="text">
+    <string>Filter out contacts</string>
+   </property>
+  </action>
+  <action name="actionShow_long">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show long</string>
+   </property>
+  </action>
+  <action name="actionShow_medium">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show medium</string>
+   </property>
+  </action>
+  <action name="actionShow_short">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show short</string>
+   </property>
+  </action>
+  <action name="actionShow_neighbours">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show neighbours</string>
+   </property>
+  </action>
+  <action name="actionShow_Biological_Unit">
+   <property name="text">
+    <string>Show Biological Unit</string>
+   </property>
+  </action>
+  <action name="actionOpen_cif">
+   <property name="text">
+    <string>Open cif</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
