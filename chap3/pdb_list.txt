@@ -1,0 +1,10 @@
+../models/models/model_376.pdb
+../models/models/model_90.pdb
+../models/models/model_638.pdb
+../models/models/model_884.pdb
+../models/models/model_894.pdb
+../models/models/model_432.pdb
+../models/models/model_741.pdb
+../models/models/model_179.pdb
+../models/models/model_125.pdb
+../models/models/model_112.pdb

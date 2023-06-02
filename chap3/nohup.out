@@ -1,0 +1,4 @@
+2023-04-12	15:47:55		backing up from '/mnt/ad48ca2d-e154-485e-aa6b-5e7277f70d4e/data' to '/media/shah/backup/data'
+rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at rsync.c(713) [sender=3.2.7]
+rsync error: received SIGUSR1 (code 19) at main.c(1613) [generator=3.2.7]
+2023-04-12	15:48:43		backup failed

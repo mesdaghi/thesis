@@ -1,0 +1,2 @@
+#!/bin/sh
+/home/shah/PycharmProjects/phd/venv/bin/python -m conkit.command_line.conkit_precision "$@"
