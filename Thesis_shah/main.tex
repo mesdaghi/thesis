@@ -1,0 +1,223 @@
+\documentclass[a4paper,oneside,12pt]{book}
+
+\newcommand{\thesistitle}{Exploiting advanced methods for membrane protein structure prediction} % Your thesis title
+\newcommand{\degree}{PhD Structural Bioinformatics} % Your degree name, this is used in the title page and abstract
+\newcommand{\typeofthesis}{PhD Thesis} % dissertation, Final Year Project, report, etc.
+\newcommand{\authorname}{Shahram Mesdaghi} % Your name, this is used in the title page and PDF stuff
+\newcommand{\authorid}{962096127} %Your Student ID can go here
+\newcommand{\keywords}{this, that, more} % Keywords for your thesis (optional)
+\newcommand{\school}{Department of Biochemistry and Systems Biology} % Your school's name, this is used in the title page
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\thesistitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywords} % Set the PDF's keywords to your keywords
+\hypersetup{pdfsubject=\degree} % Set the PDF's keywords to your keywords
+}
+
+%% Language and font encodings
+\usepackage{pdflscape}
+\usepackage{listings}
+\usepackage{caption,subcaption}
+\usepackage{float}
+ \usepackage[normalem]{ulem}
+ \useunder{\uline}{\ul}{}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage{ragged2e} %allows for text alignment preferences
+%% Bibliographical stuff
+\usepackage[numbers,sort]{natbib}
+\usepackage{color,soul}
+\usepackage[table,xcdraw]{xcolor}
+
+%% Document size
+\usepackage[a4paper,top=2.56cm,bottom=2.56cm,left=2.56cm,right=2.56cm, head = 16pt]{geometry}
+\setlength{\marginparwidth}{2cm}
+%% Useful packages
+\usepackage{amsmath}
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\usepackage[pdftex]{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{caption}
+\usepackage{tocbibind}% if no caption, no colon
+%\usepackage{sfmath} %use sans-serif in the maths sections too
+\usepackage[parfill]{parskip}    % Begin paragraphs with an empty line rather than an indent
+\usepackage{setspace} % to permit one-and-a-half or double spacing
+\usepackage{enumerate} % fancy enumerations like (i) (ii) or (a) (b) and suchlike
+\usepackage{booktabs} % To thicken table lines
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} %defines \checkmark which can be useful
+%Defines Style for embedded code, can be modified
+\definecolor{tcdblue}{cmyk}{0.94, 0.38, 0, 0.27}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+\lstdefinestyle{linux-terminal}{
+    language=bash,
+    backgroundcolor=\color{backcolour},  
+    commentstyle=\color{codegray},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray}\emptyaccsupp,
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    alsoletter={-},
+    %escapeinside={(*@}{@*)},
+    %escapeinside={<@}{@>},
+    escapechar=\~,
+    morekeywords={ssh,scp,crontab,host,user,hostname,ProxyCommand,
+    ssh-keygen,rsync,pisa,alias,sudo,apt-get, perl, pip, conda,
+    gfortran, g77, ample,tar}
+}
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\thepage}
+\ifdefined\authorid
+\chead{\it \authorname\ (\authorid)}
+\else
+\chead{\it \authorname}
+\fi
+\usepackage{mathpazo} 
+\renewcommand{\theequation}{\arabic{equation}} 
+%% Format Chapter headings appropriately
+\usepackage{titlesec}
+
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{tcdblue}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\title{\thesistitle}
+\author{\authorname}
+
+\frontmatter
+\begin{document}
+\input{title/title.tex}
+\pagenumbering{roman}
+\doublespacing
+
+
+
+\newpage
+\chapter{Declaration}
+I confirm that I have read and understood the University’s Academic Integrity Policy.\\
+I confirm that I have acted honestly, ethically and professionally in conduct leading to assessment for the programme of study.\\ 
+I confirm that I have not copied material from another source nor committed plagiarism nor fabricated, falsified or embellished data when completing the attached piece of work. I confirm that I have not copied material from another source, nor colluded with any other student in the preparation and production of this work.  
+
+
+The material in chapter 3 is published across two papers;
+\begin{itemize}
+  \item S. Mesdaghi, D. L. Murphy, F. Sánchez Rodríguez, J. J. Burgos-Mármol, and D. J. Rigden, “In silico prediction of structure and function for a large family of transmembrane proteins that includes human Tmem41b,” F1000Research, vol. 9, p. 1395, Mar. 2021. 
+  \item F. Sánchez Rodríguez, S. Mesdaghi, D. L. Murphy, J. J. Burgos-Mármol, and D. J. Rigden., “ConPlot: web-based application for the visualization of protein contact maps integrated with other data,” Bioinformatics, Jan. 2021.
+\end{itemize}
+
+The following outlines the contributions to each of the studies that constitute the thesis results chapter 3:
+\begin{itemize}
+    \item Construction of the metagenomics custom database was carried out by D. L. Murphy;
+    \item Rectifying registry errors in pdb file of 3org was carried out by J. J. Burgos-Mármol using CROPS.  The processed PDB files allowed ConKit and ConPlot parsing;
+    \item Initial conceptualisation of ConPlot and integration into ConKit was carried out by S. Mesdaghi and subsequent the web application was developed by F. Sánchez Rodríguez with S. Mesdaghi writing prediction data parsers and contributing testing;
+    \item All authors read, contributed and approved the final manuscripts.
+    \item Professor D. J. Rigden and S. Mesdaghi were responsible for responses to the referees.
+\end{itemize}
+
+Chapter 4 was the result of a collaboration with The Francis Crick Institute.  All the data presented (unless otherwise indicated) was produced by S. Mesdaghi with the Atg9 homology models being constructed by Professor D. J. Rigden and experimental analysis provided by Sharon Tooze.
+
+The material in chapter 6 has been published as a preprint and submitted to Bioscience Reports for peer reviewed publication;
+
+\begin{itemize}
+  \item Mesdaghi S, Murphy DL, Simpkin A, Rigden DJ. Structural Insights into Pink-eyed Dilution Protein (Oca2). bioRxiv. 2022 Dec 12.
+
+\end{itemize}
+
+Material included in the discussion in relation to the  mining of databases for tandem repeat proteins has been included in a manuscript that has been submitted for publication;
+'Deep Learning-based structure modelling illuminates structure and function in uncharted regions of $\beta$-solenoid fold space' (Shahram Mesdaghi, Rebecca M. Price, Jillian Madine and Daniel J. Rigden). 
+
+ChatGPT was used when making corrections (post viva) to amend the grammar, syntax, and semantics of the explanations describing Overhauser enhancement (NOE) restraints and the distinction between convoluted neural networks and deep residual neural networks (both in the introduction).  Additionally, ChatGPT was used to obtain the LaTEX code for the formatting of the root mean square deviation (RMSD) equation in section 2.2.8 (Structural alignments) of the Methods chapter.
+
+
+\newpage
+\chapter{Acknowledgements}
+I would like to thank the University of Liverpool for their fee waiver scheme as well as the COVID-19 impact bursary; completing this PhD without this funding would have proved very difficult.  Further, I would like to thank the other members of the Rigden group, in particular my fellow students David L Murphy and Filo Sánchez Rodríguez for their contributions to our collaborative efforts during this project.  Additionally, I would like to thank the Turing Foundation, Professor Pat Eyers, Helen Carlin, Professor Natarajan Kannan and the University of Georgia for the opportunity to exchange ideas and skills during my Turing Fellowship.  I would like to thank my family who provided me with the support and space required to deal through the stresses associated with completing this PhD.  Finally, I would like to give my biggest thank you to my supervisor, Professor D J Rigden, for supporting my PhD application and giving me chance to join his group; Professor Rigden's dedicated support, guidance, knowledge and encouragement has been invaluable throughout this PhD. 
+
+
+\newpage
+\chapter{Abstract}
+Recent strides in computational structural biology have opened up an opportunity to understand previously uncharacterised proteins.  The under-representation of transmembrane proteins in the Protein Data Bank highlights the need to apply new and advanced bioinformatics methods to shed light on their structure and function.  A protein’s structural information is crucial to understand its function and evolution. Currently, there is only experimental structural data for a tiny fraction of proteins. For instance, membrane proteins are encoded by 30\% of the protein-coding genes of the human genome, but they only have a 3.5\% representation in the Protein Data Bank (PDB). Membrane protein families are particularly poorly understood due to experimental difficulties, such as over-expression, which can result in toxicity to host cells, as well as difficulty in finding a suitable membrane mimetic to reconstitute the protein. Additionally, membrane proteins are much less conserved across species compared to water-soluble proteins, making sequence-based homologue identification a challenge, and in turn rendering homology modelling of these proteins more difficult. \\
+
+Until the structure of poorly characterised protein families can be elucidated experimentally, ab initio protein modelling can be used to predict a fold allowing for structure-based function inferences. Such methods have made significant strides recently due to the availability of contact predictions, with these methods addressing larger targets than conventional fragment-assembly-based ab initio methods. \\
+
+This study initially focusses on the structure and function transmembrane proteins specifically in the process of autophagosome construction and demonstrates how covariance prediction data have multiple roles in modern structural bioinformatics: not just by acting as restraints for model making and serving for validation of the final models but by predicting domain boundaries and revealing the presence of cryptic internal repeats not evidenced by sequence analysis. Furthermore, we characterised a contact map feature characteristic of a re-entrant helix which may in future allow detection of this feature in other protein families. \\
+
+The recent innovations in computational structural biology were employed further giving rise to an an opportunity to revise our current understanding of the structure and function of clinically important proteins.   Through the modelling of the transmembrane Pfam families and subsequent mining of their structural libraries we identified the human Oca2 protein as a protein of interest.  Oca2 is located on mature melanosomal membranes and mutations of Oca2 can result in a form of oculocutanous albinism which is the most prevalent and visually identifiable form of albinism. Sequence analysis predicts Oca2 to be a member of the SLC13 transporter family but it has not been classified into any existing SLC families.  The modelling of Oca2 with AlphaFold2 and other advanced methods shows that, like SLC13 members, it consists of a scaffold and transport domain and displays a pseudo inverted repeat topology that includes re-entrant loops.  This finding contradicts the prevailing consensus view of its topology.  In addition to the scaffold and transport domains the presence of a cryptic GOLD domain is revealed that is likely responsible for its trafficking from the endoplasmic reticulum to the Golgi prior to localisation at the melanosomes and possesses known glycosylation sites.  Analysis of the putative ligand binding site of the model shows the presence of highly conserved key asparagine residues that suggest Oca2 may be a Na\textsuperscript{+}/dicarboxylate symporter.  Known critical pathogenic mutations map to structural features present in the repeat regions that form the transport domain.  Exploiting the AlphaFold2 multimeric modelling protocol in combination with conventional homology modelling allowed the building of a plausible homodimer in both an inward- and outward-facing conformation supporting an elevator-type transport mechanism.
+
+% \hl{More info on Pfam TM modelling to be included}
+
+\newpage
+\raggedright %\raggedright turns off justification and hypenation
+
+\newpage \tableofcontents
+\newpage \listoffigures
+\newpage \listoftables
+\newpage
+
+\mainmatter
+\setlength{\parindent}{3ex}
+\input{introduction/introduction.tex}
+\input{Experimental Methods/experiment}
+\input{Results/results}
+\input{Modelling of Atg9/atg9}
+\input{Pfam/pfam}
+\input{oca2/oca2.tex}
+\input{conclusion/conclusion.tex}
+\renewcommand\bibname{References} 
+\bibliographystyle{IEEEtran} %IEEE bibliography style by default
+\bibliography{bibs/sample2}
+
+
+%\appendix
+%\renewcommand{\thechapter}{A\arabic{chapter}}
+%\input{appendix/appendix.tex}
+
+
+\end{document}
