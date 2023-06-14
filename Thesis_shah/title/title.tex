@@ -1,0 +1,27 @@
+\begin{titlepage}
+\center
+\begin{center}
+\includegraphics[width=100mm]{title/unnamed.png}\\[0cm] 
+\end{center}
+\ifdefined\school
+\large \textsc{\school}\\[1.5cm] % Minor heading such as course title
+\ifdefined\department
+\large \department\\[1.5cm] % Minor heading such as course title
+\fi
+\makeatletter
+\textsc{{ \huge \bfseries \thesistitle}}\\[1.5cm] % Title of your document
+\textsc{Thesis submitted in accordance with the requirements of the University of Liverpool for the degree of Doctor in Philosophy}\\
+\textsc{}\\
+\textsc{Author: \authorname \hspace{0.25cm} (ID: 962096127)}\\[0cm] % Your name and Student ID
+\textsc{Project Supervisor: Prof Daniel Rigden}\\[0cm] %Project Supervisor Name
+%\textsc{Project Assessor: }\\[1cm] %Project Assessor Name
+
+
+\vspace{1.9cm}
+
+
+\vspace{1cm}
+\textsc{{\large \today}}\\[2cm] % Date
+\vspace{1cm}
+\vfill 
+\end{titlepage}
